@@ -22,6 +22,6 @@
 
     <a href="bmi.html"><button>回到BMI計算</button></a>
 </div>
-</h1>
+
 </body>
 </html>
