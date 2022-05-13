@@ -8,6 +8,13 @@
 </head>
 <body>
 <h1>會員登入</h1>
+<?php
+
+if(!empty($_GET['error'])){
+    echo "<h3 style='color:red'>{$_GET['error']}</h3>";
+}
+
+?>
 <form action="chklogin.php" method="post">
     <table>
         <tr>
