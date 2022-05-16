@@ -11,8 +11,7 @@ if($acc!=$default_user || $pw!=$default_pw){
     $error="帳號或密碼錯誤";
     header("location:login.php?error=$error");
 }else{
-    session_start();
-    $_SESSION['login']=$acc;
+    setcookie('login',$acc,time()+360);
     header("location:memcenter.php");
 
 }
