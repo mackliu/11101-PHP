@@ -1,10 +1,16 @@
 <H1>購物車</H1>
 
 <?php
-setcookie('產品',serialize(['CPU'=>2,"RAM"=>4,"螢幕"=>5,"鍵盤"=>10]),time()+3600);
+session_start();
+$_SESSION['cart']["CPU"]=3;
+$_SESSION['cart']["RAM"]=5;
+$_SESSION['cart']["主機板"]=4;
+$_SESSION['cart']["鍵盤"]=4;
 
-$cart=unserialize($_COOKIE['產品']);
-foreach($cart as $prod => $qt){
-    echo $prod."->".$qt."<br>";
+
+foreach($_SESSION['cart'] as $prod => $qt)
+{
+    echo $prod . "->" . $qt . "<br>";
 }
+
 ?>
